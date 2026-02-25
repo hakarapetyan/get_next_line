@@ -21,3 +21,15 @@ Files,"get_next_line.c, get_next_line_utils.c, get_next_line.h"
 Parameters,fd: The file descriptor to read from.
 
 Return Value,"The line read (including \n), or NULL if finished or an error occurs."
+
+### 🌟 Bonus Part: Multiple File Descriptors
+The bonus section of this project takes the function to the next level by adding two main challenges:
+
+1. Single Static Variable
+While the mandatory part allows multiple static variables, the bonus requirement limits the code to only one static variable. This requires a more efficient way to manage memory and data storage.
+
+2. Managing Multiple Files
+In the mandatory version, the function only needs to handle one file at a time. The bonus version can manage multiple file descriptors simultaneously without getting them mixed up.
+
+### ⚙️ Technical Logic
+To handle multiple files with a single static variable, the variable is typically structured as an array or a linked list. This allows the function to store a separate "reading state" for every unique File Descriptor (fd) opened by the system.
