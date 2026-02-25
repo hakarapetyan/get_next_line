@@ -33,3 +33,14 @@ In the mandatory version, the function only needs to handle one file at a time. 
 
 ### ⚙️ Technical Logic
 To handle multiple files with a single static variable, the variable is typically structured as an array or a linked list. This allows the function to store a separate "reading state" for every unique File Descriptor (fd) opened by the system.
+
+### 📦 Instructions
+Compilation
+To compile the project with a specific buffer size, use the following command:
+```bash
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
+```
+To compile the bonus version, use the _bonus.c files:
+```bash
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_util.c
+```
